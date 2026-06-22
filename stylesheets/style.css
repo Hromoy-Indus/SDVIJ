@@ -1,3 +1,12 @@
-@import "reset.css";
-@import "layout.css";
-@import "fonts.css";
+@import "./reset.css";
+@import "./layout.css";
+@import "./fonts.css";
+@import "./adaptive.css";
+@import "./404.css";
+@import "./about.css";
+@import "./blog.css";
+@import "./brochure.css";
+@import "./calaboration.css";
+@import "./cart.css";
+@import "./home.css";
+@import "./shop.css";
