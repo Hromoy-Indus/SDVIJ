@@ -40,7 +40,6 @@ if (homeBlock && homeItems.length > 0) {
 }
 
 /*---------------------------------- О нас --------------------------------------*/
-/*---------------------------------(слайдер)-------------------------------------*/
 
 document.addEventListener('DOMContentLoaded', () => {
     const photoSets = document.querySelectorAll('.about-photos-set');
@@ -139,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /*---------------------------------- Магазин --------------------------------------*/
-/*---------------------------------(слайдер)-------------------------------------*/
 
 document.addEventListener('DOMContentLoaded', () => {
     const shopBlock = document.querySelector('.shop-start');
@@ -178,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /*---------------------------------- блог --------------------------------------*/
-/*---------------------------------(слайдер)-------------------------------------*/
 
 document.addEventListener('DOMContentLoaded', () => {
     const blogArea = document.querySelector('.blog-area');
@@ -485,8 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/*---------------------------------- блог --------------------------------------*/
-/*---------------------------------(слайдер)-------------------------------------*/
+/*---------------------------------- коллаборации --------------------------------------*/
 
 document.addEventListener("DOMContentLoaded", function () {
     const calabSection = document.querySelector(".calab-start");
@@ -583,7 +579,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", updateCalabLines);
 });
 
-
+/*---------------------------------- магазин --------------------------------------*/
 
 document.addEventListener("DOMContentLoaded", function () {
     const openButtons = document.querySelectorAll("[data-shop-modal-open]");
