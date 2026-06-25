@@ -4,8 +4,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shop</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="JavaScript/scripts.js" defer></script>
 </head>
 <body>
+    <a class="shop-star" href="index.html" aria-label="На главную">
+        <img src="images/shop/black_star.png" alt="">
+    </a>
     
+    <main>
+        <section class="shop-start">
+            
+            <a class="shop-cart" href="cart.html" aria-label="Корзина">
+                <img src="images/shop/cart.png" alt="">
+            </a>
+    
+            <a class="shop-product shop-bottle" href="#" data-shop-modal-open="bottle">
+                <img src="images/shop/bottle.png" alt="Фляга Маршрут">
+            </a>
+            
+            <a class="shop-product shop-bag" href="#" data-shop-modal-open="bag">
+                <img src="images/shop/bag.png" alt="Сумка СДВИЖ">
+            </a>
+            
+            <a class="shop-product shop-mini-bags" href="#" data-shop-modal-open="mini-bags">
+                <img src="images/shop/mini_bags.png" alt="Зацепки Точки опоры">
+            </a>
+    
+            <img class="shop-sold shop-sold-1" src="images/shop/sold_1.png" alt="">
+            <img class="shop-sold shop-sold-2" src="images/shop/sold_2.png" alt="">
+            <img class="shop-sold shop-sold-3" src="images/shop/sold_3.png" alt="">
+            <img class="shop-sold shop-sold-4" src="images/shop/sold_4.png" alt="">
+            <img class="shop-sold shop-sold-5" src="images/shop/sold_5.png" alt="">
+        </section>
+    </main>
+    <div class="shop-modal" data-shop-modal="bottle" aria-hidden="true">
+        <div class="shop-modal-window" role="dialog" aria-modal="true" aria-labelledby="shop-bottle-title">
+            <button class="shop-modal-close" type="button" data-shop-modal-close aria-label="Закрыть"></button>
+    
+            <div class="shop-modal-photo">
+                <img src="images/shop/bottle_rectangle.png" alt="Фляга Маршрут">
+            </div>
+    
+            <div class="shop-modal-info">
+                <h2 id="shop-bottle-title">ФЛЯГА<br>«МАРШРУТ»</h2>
+    
+                <div class="shop-modal-buy">
+                    <p class="shop-modal-price">1 390 ₽</p>
+                    <p class="shop-modal-status">
+                        <img src="images/shop/mini_green_rock.png" alt="">
+                        В НАЛИЧИИ
+                    </p>
+                </div>
+    
+                <div class="shop-modal-text">
+                    <p>Каждое восхождение начинается с первого движения. Каждый маршрут складывается из решений, поворотов и
+                        точек опоры. Графика на фляге вдохновлена схемами скалолазных трасс: линии соединяют узлы, образуя
+                        уникальный путь, а координаты напоминают о моментах, которые останутся с нами после каждого подъёма.
+                    </p>
+    
+                    <p>Лёгкая и компактная форма позволяет удобно закрепить флягу на рюкзаке или взять с собой в любое
+                        путешествие. Матовое покрытие приятно лежит в руке, а минималистичный дизайн делает её не просто
+                        спортивным аксессуаром, а частью личного маршрута.</p>
+                </div>
+    
+                <img class="shop-modal-features" src="images/shop/bottle_features.png"
+                    alt="Объём 500 мл, герметичная крышка, пищевой пластик, удобно брать с собой">
+    
+                <div class="shop-modal-actions">
+                    <div class="shop-modal-count">
+                        <button type="button" data-shop-minus>−</button>
+                        <span data-shop-count>1</span>
+                        <button type="button" data-shop-plus>+</button>
+                    </div>
+    
+                    <button class="shop-modal-add" type="button">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shop-modal" data-shop-modal="bag" aria-hidden="true">
+        <div class="shop-modal-window" role="dialog" aria-modal="true" aria-labelledby="shop-bag-title">
+            <button class="shop-modal-close" type="button" data-shop-modal-close aria-label="Закрыть"></button>
+    
+            <div class="shop-modal-photo">
+                <img src="images/shop/bag_rectangle.png" alt="Сумка СДВИЖ">
+            </div>
+    
+            <div class="shop-modal-info">
+                <h2 id="shop-bag-title">СУМКА<br>«СДВИЖ»</h2>
+    
+                <div class="shop-modal-buy">
+                    <p class="shop-modal-price">2 490 ₽</p>
+                    <p class="shop-modal-status">
+                        <img src="images/shop/mini_green_rock.png" alt="">
+                        В НАЛИЧИИ
+                    </p>
+                </div>
+    
+                <div class="shop-modal-text">
+                    <p>Создана для тех, кто постоянно находится в движении. Графика вдохновлена схемами скалолазных
+                        маршрутов: линии соединяют зацепки, а каждый узел напоминает о выборе следующей точки опоры.
+                        Координаты превращают сумку в своеобразную карту личных восхождений и пройденных маршрутов.</p>
+    
+                    <p>Компактный размер позволяет носить всё самое необходимое каждый день: телефон, ключи, кошелёк и
+                        другие мелочи всегда остаются под рукой. Износостойкий материал оксфорд, влагозащитная молния и
+                        регулируемый ремень делают сумку удобной как в городе, так и во время поездок или тренировок.</p>
+                </div>
+    
+                <img class="shop-modal-features" src="images/shop/bag_features.png"
+                    alt="Материал оксфорд, регулируемый ремень, влагостойкая молния">
+    
+                <div class="shop-modal-actions">
+                    <div class="shop-modal-count">
+                        <button type="button" data-shop-minus>−</button>
+                        <span data-shop-count>1</span>
+                        <button type="button" data-shop-plus>+</button>
+                    </div>
+    
+                    <button class="shop-modal-add" type="button">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="shop-modal" data-shop-modal="mini-bags" aria-hidden="true">
+        <div class="shop-modal-window" role="dialog" aria-modal="true" aria-labelledby="shop-mini-bags-title">
+            <button class="shop-modal-close" type="button" data-shop-modal-close aria-label="Закрыть"></button>
+    
+            <div class="shop-modal-photo">
+                <img src="images/shop/mini_bags_rectangle.png" alt="Зацепки Точки опоры">
+            </div>
+    
+            <div class="shop-modal-info">
+                <h2 id="shop-mini-bags-title">ЗАЦЕПКИ<br>«ТОЧКИ ОПОРЫ»</h2>
+    
+                <div class="shop-modal-buy">
+                    <p class="shop-modal-price">1 190 ₽</p>
+                    <p class="shop-modal-status">
+                        <img src="images/shop/mini_green_rock.png" alt="">
+                        В НАЛИЧИИ
+                    </p>
+                </div>
+    
+                <div class="shop-modal-text">
+                    <p>Иногда самое важное можно уместить в маленькой детали. Мини-сумки «Точки опоры» повторяют форму
+                        настоящих скалодромных зацепок и превращают их в аксессуар для повседневной жизни. Пунктирные линии,
+                        координаты и графика маршрутов напоминают, что любое движение начинается с первой точки опоры.</p>
+    
+                    <p>Носите их на рюкзаке, сумке или карабине, храните внутри ключи, наушники и другие необходимые мелочи.
+                        Компактные размеры, прочный полиуретан и комплект из двух сумок делают аксессуар одновременно
+                        практичным и узнаваемым элементом фирменного стиля СДВИЖ*.</p>
+                </div>
+    
+                <img class="shop-modal-features" src="images/shop/mini_bags_features.png"
+                    alt="Материал полиуретан, для скалодрома, комплект 2 штуки">
+    
+                <div class="shop-modal-actions">
+                    <div class="shop-modal-count">
+                        <button type="button" data-shop-minus>−</button>
+                        <span data-shop-count>1</span>
+                        <button type="button" data-shop-plus>+</button>
+                    </div>
+    
+                    <button class="shop-modal-add" type="button">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+    <img class="footer-date" src="images/footer/cords.png" alt="12.01.26">
+
+    <div class="footer-content">
+        <nav class="footer-menu" aria-label="Меню в подвале">
+            <a class="footer-link footer-link-active" href="index.html">Главная</a>
+            <a class="footer-link" href="about.html">О нас</a>
+            <a class="footer-link" href="blog.html">Блог</a>
+            <a class="footer-link" href="calaboration.html">Калаборации</a>
+            <a class="footer-link" href="shop.html">Магазин</a>
+        </nav>
+
+        <div class="footer-info">
+            <div class="footer-row">
+                <img src="images/footer/location.png" alt="">
+                <p>ул. Барашкинская,<br>корп.5, этаж 3</p>
+            </div>
+
+            <div class="footer-row">
+                <img src="images/footer/time.png" alt="">
+                <p>Будни:<br>11:00 - 21:00</p>
+            </div>
+
+            <div class="footer-row footer-row-time">
+                <img src="images/footer/time.png" alt="">
+                <p>Выходные:<br>07:00 - 23:00</p>
+            </div>
+        </div>
+
+        <div class="footer-contacts">
+            <a class="footer-row" href="mailto:sdvizh.sup@gmail.com">
+                <img src="images/footer/mail.png" alt="">
+                <span>sdvizh*.sup@gmail.com</span>
+            </a>
+
+            <a class="footer-row" href="tel:+79651372424">
+                <img src="images/footer/call.png" alt="">
+                <span>+79651372424</span>
+            </a>
+        </div>
+
+        <div class="footer-social">
+            <a class="footer-social-link" href="404.html">
+                <img src="images/footer/instagram.png" alt="">
+                <span>Instagram</span>
+            </a>
+
+            <a class="footer-social-link" href="404.html">
+                <img src="images/footer/youtube.png" alt="">
+                <span>YouTube</span>
+            </a>
+
+            <a class="footer-social-link" href="404.html">
+                <img src="images/footer/tiktok.png" alt="">
+                <span>TikTok</span>
+            </a>
+
+            <a class="footer-social-link" href="404.html">
+                <img src="images/footer/telegram.png" alt="">
+                <span>Telegram</span>
+            </a>
+
+            <a class="footer-social-link" href="404.html">
+                <img src="images/footer/twitter.png" alt="">
+                <span>X.com</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 СДВИЖ* СКАЛОДРОМ</p>
+        <p>Правила и условия | Политика конфиденциальности</p>
+    </div>
+
+    <img class="footer-logo" src="images/footer/main_logo.png" alt="">
+</footer>
 </body>
 </html>

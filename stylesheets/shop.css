@@ -1,0 +1,353 @@
+.shop-start {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #ffffff;
+    background-image: url("../images/shop/background.png");
+    background-repeat: repeat;
+    background-size: 100vw auto;
+    background-position: var(--shop-bg-x, 0px) var(--shop-bg-y, 0px);
+    transition: background-position 1s ease-out;
+}
+
+.shop-star {
+    position: fixed;
+    top: 2.7vw;
+    left: 1.8vw;
+    z-index: 1000;
+    display: block;
+    width: clamp(42px, 3.8vw, 72px);
+}
+
+.shop-star img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.shop-cart {
+    position: absolute;
+    top: 2.8vw;
+    right: 2.4vw;
+    z-index: 5;
+    width: clamp(28px, 2.6vw, 42px);
+}
+
+.shop-cart img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.shop-product,
+.shop-sold {
+    position: absolute;
+    display: block;
+}
+
+.shop-product {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transform: translate(var(--shop-move-x, 0), var(--shop-move-y, 0));
+    transition: transform 1s ease;
+    will-change: transform;
+}
+
+.shop-product img,
+.shop-sold {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.shop-product img {
+    transform-origin: center center;
+}
+
+.shop-product:hover img {
+    animation: shopProductSwing 7s ease-in-out infinite;
+}
+
+.shop-bottle {
+    top: 16%;
+    left: 11%;
+    width: 14%;
+}
+
+.shop-mini-bags {
+    top: 58%;
+    left: 13%;
+    width: 16%;
+}
+
+.shop-bag {
+    top: 44%;
+    left: 57%;
+    width: 17%;
+}
+
+.shop-sold-1 {
+    top: 15%;
+    left: 41%;
+    width: 16%;
+}
+
+.shop-sold-2 {
+    top: 75%;
+    right: 11%;
+    width: 16%;
+}
+
+.shop-sold-3 {
+    top: 75%;
+    left: 36%;
+    width: 17%;
+}
+
+.shop-sold-4 {
+    top: 40%;
+    left: 35%;
+    width: 17%;
+}
+
+.shop-sold-5 {
+    top: 15%;
+    right: 12%;
+    width: 16%;
+}
+
+@keyframes shopProductSwing {
+    0% {
+        transform: rotate(0deg) translateY(0) scale(1.03);
+    }
+
+    20% {
+        transform: rotate(-1deg) translateY(-2px) scale(1.035);
+    }
+
+    40% {
+        transform: rotate(0.8deg) translateY(-3px) scale(1.04);
+    }
+
+    60% {
+        transform: rotate(1deg) translateY(-2px) scale(1.035);
+    }
+
+    80% {
+        transform: rotate(-0.7deg) translateY(1px) scale(1.03);
+    }
+
+    100% {
+        transform: rotate(0deg) translateY(0) scale(1.03);
+    }
+}
+
+.shop-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw;
+    background: rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(7px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    overflow: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.shop-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.shop-modal-window {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 46% 1fr;
+    align-items: stretch;
+    gap: 4vw;
+    width: min(74vw, 1080px);
+    max-height: 84vh;
+    padding: 4vw 4.2vw 3.6vw;
+    background: #ffffff;
+    overflow: auto;
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: 400;
+}
+
+.shop-modal-close {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.shop-modal-close::before,
+.shop-modal-close::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 34px;
+    height: 2px;
+    background: #666666;
+}
+
+.shop-modal-close::before {
+    transform: rotate(45deg);
+}
+
+.shop-modal-close::after {
+    transform: rotate(-45deg);
+}
+
+.shop-modal::before,
+.shop-modal::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 52vw;
+    height: 52vw;
+    border-radius: 50%;
+    filter: blur(58px);
+    pointer-events: none;
+}
+
+.shop-modal::before {
+    top: -18vw;
+    right: -8vw;
+    background: radial-gradient(circle, rgba(255, 86, 0, 0.95) 0%, rgba(255, 86, 0, 0.62) 38%, rgba(255, 86, 0, 0) 72%);
+}
+
+.shop-modal::after {
+    bottom: -18vw;
+    left: -10vw;
+    background: radial-gradient(circle, rgba(255, 122, 50, 0.9) 0%, rgba(255, 122, 50, 0.58) 40%, rgba(255, 122, 50, 0) 74%);
+}
+
+.shop-modal-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+}
+
+.shop-modal-info h2 {
+    margin: 0 0 2.6vw;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: clamp(34px, 3vw, 56px);
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0;
+}
+
+.shop-modal-buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 2.4vw;
+}
+
+.shop-modal-price {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: clamp(26px, 2vw, 38px);
+    font-weight: 400;
+}
+
+.shop-modal-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0;
+    font-size: clamp(16px, 1.3vw, 22px);
+}
+
+.shop-modal-status img {
+    width: 18px;
+    height: auto;
+}
+
+.shop-modal-text {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: clamp(15px, 1vw, 18px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.shop-modal-text p {
+    margin: 0 0 1.4em;
+}
+
+.shop-modal-features {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 26px;
+    padding-top: 24px;
+    border-top: 2px dashed #cfcfcf;
+}
+
+.shop-modal-actions {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 24px;
+}
+
+.shop-modal-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+    height: 52px;
+    border: 1px solid #999999;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.shop-modal-count button {
+    width: 40px;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.shop-modal-count span {
+    font-size: 18px;
+}
+
+.shop-modal-add {
+    flex: 1;
+    min-height: 52px;
+    border: 0;
+    border-radius: 8px;
+    background: #ff5600;
+    color: #ffffff;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.shop-modal-lock {
+    overflow: hidden;
+}

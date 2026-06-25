@@ -1,0 +1,129 @@
+.calab-start {
+    position: relative;
+    min-height: clamp(760px, 88vh, 960px);
+    overflow: hidden;
+    padding-bottom: clamp(70px, 7vh, 110px);
+    background-color: #ffffff;
+    background-image: url("../images/calaboration/background.png");
+    background-repeat: repeat;
+    background-size: 100vw auto;
+}
+
+.calab-home {
+    position: fixed;
+    top: 2vw;
+    left: 2vw;
+    z-index: 20;
+    display: block;
+    width: clamp(42px, 4.6vw, 68px);
+}
+
+.calab-home img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.calab-list {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.calab-card {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    width: 20vw;
+    max-width: 260px;
+    min-width: 180px;
+    text-decoration: none;
+    --calab-x: 0px;
+    --calab-y: 0px;
+    --calab-scale: 1;
+    transform: translate(var(--calab-x), var(--calab-y)) scale(var(--calab-scale));
+    transition: transform 0.8s ease;
+    will-change: transform;
+}
+
+.calab-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.calab-card:not(.calab-empty):hover {
+    --calab-scale: 1.08;
+}
+
+.calab-empty {
+    pointer-events: none;
+}
+
+.calab-card-1 {
+    top: 9vh;
+    left: 17vw;
+}
+
+.calab-card-2 {
+    top: 9vh;
+    left: 66vw;
+}
+
+.calab-card-3 {
+    top: 56%;
+    left: 21vw;
+}
+
+.calab-card-4 {
+    top: 51%;
+    left: 68vw;
+}
+
+.calab-point {
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 0.8vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1vw;
+    transform: translateX(-50%);
+    color: #000000;
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.calab-point span {
+    color: #ff5600;
+    font-family: "Days One", Arial, sans-serif;
+    font-size: clamp(32px, 3vw, 46px);
+    line-height: 0.7;
+}
+
+.calab-point b {
+    font-size: clamp(18px, 1.6vw, 26px);
+}
+
+.calab-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.calab-line {
+    stroke: #ff5600;
+    stroke-width: 8;
+    stroke-linecap: square;
+    stroke-dasharray: 18 18;
+}
+
+.calab-center {
+    fill: #ff5600;
+}

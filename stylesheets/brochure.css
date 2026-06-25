@@ -1,0 +1,139 @@
+.brochure-start {
+    position: relative;
+    padding: 9vw 0 4vw;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.brochure-home {
+    position: fixed;
+    top: 2vw;
+    left: 2vw;
+    z-index: 20;
+    display: block;
+    width: clamp(42px, 4.6vw, 68px);
+}
+
+.brochure-home img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.brochure-wrap {
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) minmax(320px, 1fr);
+    gap: 7vw;
+    width: 84%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.brochure-photos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8vw;
+}
+
+.brochure-photos img,
+.brochure-mobile-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.brochure-info {
+    padding-top: 0.2vw;
+}
+
+.brochure-label {
+    margin: 0 0 2vw;
+    color: #ff5600;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: clamp(14px, 1.1vw, 18px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.brochure-title {
+    margin: 0;
+    color: #000000;
+    font-family: "Days One", Arial, sans-serif;
+    font-size: clamp(58px, 6.8vw, 98px);
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: 0;
+}
+
+.brochure-star {
+    margin: 3vw 0 2.5vw;
+    color: #ff5600;
+    font-family: "Days One", Arial, sans-serif;
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: 0.8;
+}
+
+.brochure-intro {
+    max-width: 520px;
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: clamp(18px, 1.45vw, 24px);
+    font-weight: 400;
+    line-height: 1.18;
+}
+
+.brochure-line {
+    width: 100%;
+    height: 3px;
+    margin: 3.8vw 0 2.2vw;
+    background-color: #ff5600;
+}
+
+.brochure-item {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 1.2vw;
+    margin-bottom: 2.6vw;
+}
+
+.brochure-item span {
+    color: #ff5600;
+    font-family: "Days One", Arial, sans-serif;
+    font-size: 34px;
+    line-height: 0.9;
+}
+
+.brochure-item p {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: clamp(17px, 1.35vw, 22px);
+    font-weight: 400;
+    line-height: 1.18;
+}
+
+.brochure-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 46px;
+    margin-top: 3vw;
+    border-radius: 999px;
+    background-color: #ff5600;
+    color: #ffffff;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: clamp(16px, 1.25vw, 20px);
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform 0.35s ease, background-color 0.35s ease;
+}
+
+.brochure-button:hover {
+    transform: scale(1.02);
+    background-color: #f04f00;
+}
+
+.brochure-mobile-photo {
+    display: none;
+}

@@ -1,0 +1,105 @@
+.error-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 35% 35%, rgba(255, 170, 95, 0.55) 0%, rgba(255, 170, 95, 0) 32%),
+        radial-gradient(circle at 65% 65%, rgba(255, 145, 70, 0.5) 0%, rgba(255, 145, 70, 0) 34%),
+        linear-gradient(135deg, #ff5600 0%, #ff7b32 52%, #ff5600 100%);
+    color: #ffffff;
+    font-family: "Days One", Arial, sans-serif;
+}
+
+.error-page::before {
+    content: "";
+    position: absolute;
+    inset: -35%;
+    z-index: 0;
+    background:
+        radial-gradient(circle at 30% 45%, rgba(255, 190, 120, 0.45) 0%, rgba(255, 190, 120, 0) 24%),
+        radial-gradient(circle at 70% 55%, rgba(255, 155, 85, 0.4) 0%, rgba(255, 155, 85, 0) 26%);
+    animation: errorGradientMove 18s linear infinite;
+    pointer-events: none;
+}
+
+.error-star {
+    position: fixed;
+    top: 1.7vw;
+    left: 1.8vw;
+    z-index: 10;
+    display: block;
+    width: clamp(46px, 4.8vw, 72px);
+}
+
+.error-star img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.error-content {
+    position: relative;
+    z-index: 3;
+    width: 72%;
+    margin: 0 auto;
+    padding-top: 15vh;
+    text-align: center;
+}
+
+.error-content h1 {
+    margin: 0;
+    font-family: "Days One", Arial, sans-serif;
+    font-size: clamp(38px, 2.7vw, 58px);
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: 0;
+}
+
+.error-link {
+    display: inline-block;
+    margin-top: 3vh;
+    color: #ffd1b8;
+    font-family: "Days One", Arial, sans-serif;
+    font-size: clamp(14px, 1.0vw, 24px);
+    line-height: 1.2;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+.error-ellipse {
+    position: absolute;
+    left: 50%;
+    bottom: -45vh;
+    z-index: 1;
+    display: block;
+    width: 118vw;
+    max-width: none;
+    height: auto;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.error-number {
+    position: absolute;
+    left: 50%;
+    bottom: 2vh;
+    z-index: 2;
+    display: block;
+    width: 50vw;
+    max-width: none;
+    height: auto;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+@keyframes errorGradientMove {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
